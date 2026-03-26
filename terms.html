@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — RealAwake</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --bg:        #06050F;
+      --bg2:       #0D0B1A;
+      --lilac:     #B39DDB;
+      --lilac-dim: rgba(179,157,219,0.55);
+      --gold:      #F0C040;
+      --white:     #FFFFFF;
+      --white-dim: rgba(255,255,255,0.75);
+      --card:      rgba(255,255,255,0.06);
+      --border:    rgba(255,255,255,0.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);
+      color: var(--white-dim);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 45%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 80%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(2px 2px at 55% 35%, rgba(179,157,219,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 75%, rgba(255,255,255,0.25) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(179,157,219,0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .nav a {
+      color: var(--lilac);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .nav a:hover { opacity: 1; }
+    .nav-sep { color: var(--lilac-dim); font-size: 12px; }
+
+    .header { margin-bottom: 40px; }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .header h1 span { color: var(--lilac); }
+
+    .header .date {
+      font-size: 12px;
+      color: var(--lilac-dim);
+      letter-spacing: 0.5px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--lilac), transparent);
+      margin: 20px 0 36px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .section { margin-bottom: 36px; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--lilac);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section p { color: var(--white-dim); margin-bottom: 12px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul { list-style: none; padding: 0; }
+
+    .section ul li {
+      padding: 5px 0 5px 20px;
+      position: relative;
+      color: var(--white-dim);
+    }
+
+    .section ul li::before {
+      content: '•';
+      color: var(--lilac);
+      position: absolute;
+      left: 0;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: var(--white-dim);
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-block {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-block h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .contact-block a {
+      color: var(--lilac);
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .contact-block a:hover { opacity: 0.75; }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .footer a { color: var(--lilac-dim); text-decoration: none; }
+    .footer a:hover { color: var(--lilac); }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .wrapper { padding: 40px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <nav class="nav">
+    <a href="index.html">RealAwake</a>
+    <span class="nav-sep">›</span>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+
+  <header class="header">
+    <h1>Terms of <span>Service</span></h1>
+    <p class="date">Last updated: March 18, 2026</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="card">
+
+    <p class="intro">Welcome to RealAwake. These Terms of Service govern your access to and use of the RealAwake mobile application, including dream journaling, meditation timer, lucid dreaming tools, astral projection tracking, and premium features.</p>
+
+    <div class="section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. User Content</h2>
+      <p>You retain full ownership of your dream entries, insights, meditation notes, and other personal content created in the App.</p>
+      <p>By default, all content is stored locally on your device only. If you choose to enable Cloud Backup (a PRO feature), you grant us a limited license to store and sync your content via Firebase solely for the purpose of providing the backup service. You may disable Cloud Backup and request deletion of your cloud data at any time in Settings.</p>
+      <p>You agree not to submit content that is illegal, harmful, or violates third-party rights.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Notifications &amp; Reminders</h2>
+      <p>By enabling reminders (Journal Reminder, Reality Check, Meditation), you consent to the App scheduling local notifications on your device. You may disable or cancel reminders at any time in Settings.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. PRO Subscription</h2>
+      <p>PRO features include Cloud Backup, Biometric Protection, Personal Symbol Glossary, Dream Patterns, Monthly Dream Reports, and more. PRO subscriptions are managed through in-app purchases via Google Play or Apple App Store. Payments are final and non-refundable except as required by law. You can cancel anytime through your store account settings.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Cloud Backup (PRO)</h2>
+      <p>Cloud Backup is an optional feature that requires explicit activation. When enabled, your data is synced to Firebase (Google). You may disable this at any time. See our <a href="privacy.html" style="color:var(--lilac)">Privacy Policy</a> for full details on data handling.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Intellectual Property</h2>
+      <p>The App, including design, code, and guided content, is owned by us or our licensors. You may not copy, modify, distribute, or reverse engineer the App.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Limitation of Liability</h2>
+      <p>The App is provided "as is". We are not responsible for any loss of data or any harm resulting from use of the App. We recommend enabling Cloud Backup to protect your content.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Termination</h2>
+      <p>We may suspend or terminate your access to the App at any time for violation of these Terms.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Changes to Terms</h2>
+      <p>We may update these Terms at any time. Material changes will be notified in the App. Continued use constitutes acceptance of changes.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Governing Law</h2>
+      <p>These Terms are governed by the laws of Canada and the Province of Québec.</p>
+    </div>
+
+    <div class="contact-block">
+      <h2>Contact Us</h2>
+      <a href="mailto:contact@realawake.app">contact@realawake.app</a>
+      <a href="mailto:privacy@realawake.app">privacy@realawake.app</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 RealAwake &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
