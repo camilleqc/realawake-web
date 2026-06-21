@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RealAwake — Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0e16;
+    --bg2:#14141f;
+    --surface:#1a1a2e;
+    --line:rgba(179,157,219,.16);
+    --lilac:#b39ddb;
+    --gold:#c4a87a;
+    --text:#ececf2;
+    --muted:#9a9aae;
+    --faint:#6a6a7e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1100px 700px at 78% -8%, rgba(179,157,219,.10), transparent 60%),
+      linear-gradient(180deg,var(--bg2) 0%, var(--bg) 100%);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.6;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:64px 24px 96px}
+
+  /* Header */
+  .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--lilac);font-weight:600;margin-bottom:18px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:14px;height:14px;display:inline-block;
+    background:var(--lilac);border-radius:2px;transform:rotate(45deg);opacity:.9}
+  h1{
+    font-family:'Playfair Display',serif;font-weight:600;
+    font-size:clamp(34px,7vw,52px);line-height:1.08;letter-spacing:-.01em;
+    margin-bottom:18px;
+  }
+  .lead{color:var(--muted);font-size:17px;max-width:54ch}
+
+  /* Contact card */
+  .contact{
+    margin-top:40px;background:var(--surface);
+    border:1px solid var(--line);border-radius:16px;padding:24px 26px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;justify-content:space-between;
+  }
+  .contact .label{font-size:13px;color:var(--faint);letter-spacing:.04em}
+  .contact a.mail{
+    font-size:18px;color:var(--lilac);text-decoration:none;font-weight:500;
+    border-bottom:1px solid rgba(179,157,219,.35);padding-bottom:1px;
+  }
+  .contact a.mail:hover{border-bottom-color:var(--lilac)}
+  .contact .note{font-size:13px;color:var(--muted);flex-basis:100%}
+
+  /* Section */
+  .section-label{
+    margin:64px 0 22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;
+  }
+
+  /* FAQ accordion */
+  details{
+    border-top:1px solid var(--line);
+  }
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{
+    list-style:none;cursor:pointer;padding:20px 44px 20px 4px;position:relative;
+    font-size:17px;font-weight:500;color:var(--text);
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"";position:absolute;right:8px;top:26px;width:9px;height:9px;
+    border-right:2px solid var(--lilac);border-bottom:2px solid var(--lilac);
+    transform:rotate(45deg);transition:transform .25s ease;opacity:.85;
+  }
+  details[open] summary::after{transform:rotate(-135deg)}
+  details summary:focus-visible{outline:2px solid var(--lilac);outline-offset:3px;border-radius:6px}
+  .answer{padding:0 44px 22px 4px;color:var(--muted);font-size:15.5px}
+  .answer a{color:var(--lilac);text-decoration:none;border-bottom:1px solid rgba(179,157,219,.3)}
+  .answer strong{color:var(--text);font-weight:600}
+  .pro{color:var(--gold);font-weight:600;font-size:12px;letter-spacing:.08em;
+    border:1px solid rgba(196,168,122,.4);border-radius:20px;padding:1px 8px;margin-left:6px;
+    vertical-align:middle}
+
+  /* Footer */
+  footer{margin-top:72px;padding-top:28px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between}
+  footer .links a{color:var(--muted);text-decoration:none;font-size:14px;margin-right:20px}
+  footer .links a:hover{color:var(--lilac)}
+  footer .copy{font-size:13px;color:var(--faint)}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">RealAwake</p>
+    <h1>How can we help?</h1>
+    <p class="lead">A quiet, private space for dreams, lucid states and conscious sleep. If something isn't working or you have a question, the answers below cover most of it — and we're one email away.</p>
+
+    <div class="contact">
+      <div>
+        <div class="label">Email support</div>
+        <a class="mail" href="mailto:contact@realawake.app">contact@realawake.app</a>
+      </div>
+      <p class="note">We read every message and usually reply within a couple of days.</p>
+    </div>
+
+    <p class="section-label">Frequently asked</p>
+
+    <details>
+      <summary>How do I record a dream or other entry?</summary>
+      <div class="answer">Open the journal and add a new entry as soon as you wake — memory fades fast. For dreams, choose <strong>Normal Dream</strong> or <strong>Lucid Dream</strong>, write what you remember, and add emotions and tags. The journal also holds other kinds of entries — <strong>Astral Experience</strong>, <strong>Meditation</strong> and <strong>Contemplation</strong> — so your whole inner practice lives in one place. Over time it builds a real archive.</div>
+    </details>
+
+    <details>
+      <summary>What's the difference between the free version and PRO?<span class="pro">PRO</span></summary>
+      <div class="answer">The free version is genuinely usable — journaling, reality checks, lucid dreaming techniques, astral projection tools, meditation and your dream vocabulary are all included. <strong>PRO</strong> unlocks Cloud Backup, Biometric Lock, the full Journey Map (Dream Patterns, Insight Web and Monthly PDF Reports), and more from your reality check practice — additional daily reminders and practice analytics.</div>
+    </details>
+
+    <details>
+      <summary>How does the free trial work, and how do I cancel?</summary>
+      <div class="answer">PRO starts with a 7-day free trial. You won't be charged if you cancel at least 24 hours before the trial ends. Subscriptions renew automatically unless cancelled. To cancel or manage your plan, open <strong>Settings &gt; your subscription &gt; Manage Subscription</strong>, or go to your device's <strong>App Store settings &gt; Subscriptions</strong>.</div>
+    </details>
+
+    <details>
+      <summary>I subscribed on another device — how do I get PRO here?</summary>
+      <div class="answer">On the PRO screen, tap <strong>Restore Purchases</strong>. As long as you're signed in to the same Apple ID, your subscription will be recognised and PRO will unlock.</div>
+    </details>
+
+    <details>
+      <summary>Is my data private? What is Cloud Backup?<span class="pro">PRO</span></summary>
+      <div class="answer">Everything lives on your device by default — no data leaves your phone unless you choose to enable Cloud Backup. There are no ads, no third-party tracking, and no AI reading your dreams. Cloud Backup is opt-in and encrypted; our <a href="https://realawake.app/privacy">Privacy Policy</a> explains exactly how and where your data is stored.</div>
+    </details>
+
+    <details>
+      <summary>How do I turn on the Face ID lock?<span class="pro">PRO</span></summary>
+      <div class="answer">Open <strong>Settings</strong> and enable Biometric Lock. The app will then ask for Face ID each time it opens, keeping your journal private.</div>
+    </details>
+
+    <details>
+      <summary>What is the Head Lift Alarm?</summary>
+      <div class="answer">It's a gentle tool for astral projection practice. Set it to a specific time and it plays a short, soft chime to bring you toward the hypnagogic state — without fully waking you. The alarm plays for a few seconds only; there's nothing to dismiss.</div>
+    </details>
+
+    <details>
+      <summary>How do I share or save my Monthly Report?<span class="pro">PRO</span></summary>
+      <div class="answer">Open the Journey Map, go to Monthly Report and generate it. The report is created as a PDF you can save to your device or share. When you're done, tap <strong>Done</strong> to return to the app.</div>
+    </details>
+
+    <details>
+      <summary>Why does pattern analysis work best in English?</summary>
+      <div class="answer">The word and theme analysis is currently tuned for entries written in English, so patterns surface more accurately there. To sharpen your results, you can tell the app to ignore specific words — long-press a word to exclude it from the analysis. You can journal in any language; additional languages for analysis are coming.</div>
+    </details>
+
+    <details>
+      <summary>Something isn't working. How do I report it?</summary>
+      <div class="answer">Email <a href="mailto:contact@realawake.app">contact@realawake.app</a> with your device model, your iOS version, and a short description of what happened. A screenshot helps. We'll get back to you.</div>
+    </details>
+
+    <footer>
+      <div class="links">
+        <a href="https://realawake.app/privacy">Privacy Policy</a>
+        <a href="https://realawake.app/terms">Terms of Use</a>
+      </div>
+      <div class="copy">© 2026 RealAwake</div>
+    </footer>
+  </main>
+</body>
+</html>
