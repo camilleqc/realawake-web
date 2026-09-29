@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | RealAwake</title>
+  <meta name="description" content="Get in touch with the RealAwake team: business inquiries, feedback, bug reports, or anything else." />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --bg:        #06050F;
+      --bg2:       #0D0B1A;
+      --lilac:     #B39DDB;
+      --lilac-dim: rgba(179,157,219,0.55);
+      --gold:      #F0C040;
+      --white:     #FFFFFF;
+      --white-dim: rgba(255,255,255,0.75);
+      --card:      rgba(255,255,255,0.06);
+      --border:    rgba(255,255,255,0.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);
+      color: var(--white-dim);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 60%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 45%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 80%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(2px 2px at 55% 35%, rgba(179,157,219,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 75%, rgba(255,255,255,0.25) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      top: -240px; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 560px;
+      background: radial-gradient(ellipse, rgba(179,157,219,0.13) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .nav {
+      position: relative; z-index: 2;
+      max-width: 1080px; margin: 0 auto; padding: 28px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 700; color: var(--white);
+      letter-spacing: -0.3px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 11px;
+    }
+    .nav .brand img {
+      width: 34px; height: 34px; border-radius: 9px; display: block;
+      border: 1px solid rgba(179,157,219,0.3); box-shadow: 0 4px 16px rgba(179,157,219,0.18);
+    }
+    .nav .brand .brand-hl { color: var(--lilac); }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav .nav-link {
+      color: var(--lilac); text-decoration: none; font-size: 14px; font-weight: 500;
+      opacity: 0.85; transition: opacity 0.2s;
+    }
+    .nav .nav-link:hover, .nav .nav-link.active { opacity: 1; }
+
+    main.wrap { max-width: 720px; padding-top: 56px; padding-bottom: 100px; }
+
+    .contact-hero { text-align: center; margin-bottom: 48px; }
+    .contact-hero .eyebrow {
+      display: inline-block; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .contact-hero h1 {
+      font-family: 'Playfair Display', serif; font-weight: 700; color: var(--white);
+      font-size: 38px; margin-bottom: 16px; line-height: 1.2;
+    }
+    .contact-hero p { color: var(--white-dim); font-size: 17px; max-width: 480px; margin: 0 auto; }
+
+    .reasons {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 40px;
+    }
+    .reason-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 24px; text-decoration: none; color: var(--white-dim);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .reason-card:hover { border-color: var(--lilac-dim); transform: translateY(-2px); }
+    .reason-card .r-icon { font-size: 24px; }
+    .reason-card h3 {
+      font-family: 'Playfair Display', serif; font-weight: 700; color: var(--white); font-size: 17px;
+    }
+    .reason-card p { font-size: 14px; color: var(--white-dim); opacity: 0.85; }
+
+    .direct-email {
+      text-align: center; padding: 32px; border-radius: 16px;
+      background: var(--card); border: 1px solid var(--border);
+    }
+    .direct-email p { font-size: 14px; margin-bottom: 10px; color: var(--white-dim); opacity: 0.85; }
+    .direct-email a {
+      font-family: 'Playfair Display', serif; font-weight: 700; font-size: 20px;
+      color: var(--lilac); text-decoration: none;
+    }
+    .direct-email a:hover { color: var(--gold); }
+
+    .footer {
+      position: relative; z-index: 1;
+      max-width: 1080px; margin: 0 auto; padding: 40px 24px 60px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .footer .f-links a {
+      color: var(--white-dim); text-decoration: none; font-size: 14px; margin-right: 24px;
+      transition: color 0.2s;
+    }
+    .footer .f-links a:hover { color: var(--lilac); }
+    .footer .f-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 640px) {
+      .contact-hero h1 { font-size: 30px; }
+      .reasons { grid-template-columns: 1fr; }
+      .nav .nav-link:not(.nav-link--cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="brand" href="/"><img src="assets/app-icon.png" alt="RealAwake"><span>Real<span class="brand-hl">Awake</span></span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="nav-link active" href="/contact.html">Contact</a>
+      <a class="nav-link" href="#download">Download</a>
+    </div>
+  </nav>
+
+  <!-- CONTACT -->
+  <main class="wrap">
+    <div class="contact-hero">
+      <span class="eyebrow">Get in Touch</span>
+      <h1>We'd love to hear from you</h1>
+      <p>Business inquiries, feedback, bug reports, or just something you want to tell us. Pick what fits best below.</p>
+    </div>
+
+    <div class="reasons">
+      <a class="reason-card" href="mailto:contact@realawake.app?subject=Business%20Inquiry">
+        <span class="r-icon">🤝</span>
+        <h3>Business & Partnerships</h3>
+        <p>Collaborations, affiliate partnerships, press.</p>
+      </a>
+      <a class="reason-card" href="mailto:contact@realawake.app?subject=Feedback">
+        <span class="r-icon">💬</span>
+        <h3>Feedback</h3>
+        <p>Ideas, feature requests, what you'd love to see next.</p>
+      </a>
+      <a class="reason-card" href="mailto:contact@realawake.app?subject=Bug%20Report">
+        <span class="r-icon">🐛</span>
+        <h3>Bug Report</h3>
+        <p>Something not working right? Let us know the details.</p>
+      </a>
+      <a class="reason-card" href="mailto:contact@realawake.app?subject=General%20Inquiry">
+        <span class="r-icon">✦</span>
+        <h3>Something Else</h3>
+        <p>Questions, critiques, or anything else on your mind.</p>
+      </a>
+    </div>
+
+    <div class="direct-email">
+      <p>Prefer to write directly?</p>
+      <a href="mailto:contact@realawake.app">contact@realawake.app</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="f-links">
+      <a href="/blog/">Blog</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="f-copy">© 2026 RealAwake</div>
+  </footer>
+
+</body>
+</html>
