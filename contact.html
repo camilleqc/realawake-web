@@ -83,6 +83,13 @@
       opacity: 0.85; transition: opacity 0.2s;
     }
     .nav .nav-link:hover, .nav .nav-link.active { opacity: 1; }
+    .nav .btn-gold {
+      display: inline-block; text-decoration: none; color: #06060e; background: var(--gold);
+      font-weight: 600; font-size: 14px; letter-spacing: 0.3px; padding: 10px 20px;
+      border-radius: 999px; white-space: nowrap; opacity: 1;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .nav .btn-gold:hover { transform: translateY(-1px); opacity: 0.92; }
 
     main.wrap { max-width: 720px; padding-top: 56px; padding-bottom: 100px; }
 
@@ -148,11 +155,11 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a class="brand" href="/"><img src="assets/app-icon.png" alt="RealAwake"><span>Real<span class="brand-hl">Awake</span></span></a>
+    <a class="brand" href="/"><img src="/assets/app-icon.png" alt="RealAwake"><span>Real<span class="brand-hl">Awake</span></span></a>
     <div class="nav-links">
       <a class="nav-link" href="/blog/">Blog</a>
       <a class="nav-link active" href="/contact.html">Contact</a>
-      <a class="nav-link" href="#download">Download</a>
+      <a class="btn-gold" href="https://apps.apple.com/app/id6761784916">Download</a>
     </div>
   </nav>
 
