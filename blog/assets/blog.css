@@ -93,12 +93,13 @@ p { margin: 0 0 1.3em; }
 .logo {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   text-decoration: none;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.3px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  color: var(--ra-white);
 }
 .logo .logo-icon {
   width: 34px;
@@ -109,8 +110,8 @@ p { margin: 0 0 1.3em; }
   border: 1px solid rgba(179, 157, 219, 0.3);
   box-shadow: 0 4px 16px rgba(179, 157, 219, 0.18);
 }
-.logo span.real { color: var(--ra-purple); }
-.logo span.awake { color: var(--ra-white); }
+.logo span.real { color: inherit; }
+.logo span.awake { color: var(--ra-purple); }
 
 .site-nav {
   display: flex;
