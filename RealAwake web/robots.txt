@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://realawake.app/sitemap.xml
