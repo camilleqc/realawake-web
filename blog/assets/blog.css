@@ -99,13 +99,13 @@ p { margin: 0 0 1.3em; }
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 11px;
 }
 .logo .logo-icon {
   width: 34px;
   height: 34px;
   border-radius: 9px;
   display: block;
+  margin-right: 11px;
   border: 1px solid rgba(179, 157, 219, 0.3);
   box-shadow: 0 4px 16px rgba(179, 157, 219, 0.18);
 }
