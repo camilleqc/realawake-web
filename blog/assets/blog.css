@@ -347,6 +347,7 @@ p { margin: 0 0 1.3em; }
   .post-header h1 { font-size: 28px; }
   .site-nav { gap: 16px; }
 }
+@media (max-width: 420px) { .site-nav { gap: 12px; } .site-nav a { font-size: 13px; } .site-nav a.btn-gold { padding-left: 12px; padding-right: 12px; } }
 
 /* Free guide funnel box */
 .guide-box {
