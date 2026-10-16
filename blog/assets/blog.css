@@ -377,3 +377,5 @@ p { margin: 0 0 1.3em; }
 .post-body td strong { color: var(--ra-white); }
 @media (max-width: 640px) { .post-body table { font-size: 14px; } .post-body th, .post-body td { padding: 10px 8px; } }
 @media (max-width: 640px) { .post-body th:nth-child(2), .post-body td:nth-child(2) { display: none; } }
+@media (max-width: 480px) { .site-nav a[href="/lucid-dreaming-guide.html"] { display: none; } }
+@media (max-width: 380px) { .site-nav { gap: 8px; } .site-nav a { font-size: 12.5px; } .site-header .logo { font-size: 18px; } }
