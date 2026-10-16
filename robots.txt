@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /assets/RealAwake-Dream-Journal-Template.pdf
 Disallow: /assets/*.pdf
 
 Sitemap: https://realawake.app/sitemap.xml
