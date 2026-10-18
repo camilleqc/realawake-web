@@ -379,3 +379,11 @@ p { margin: 0 0 1.3em; }
 @media (max-width: 640px) { .post-body th:nth-child(2), .post-body td:nth-child(2) { display: none; } }
 @media (max-width: 480px) { .site-nav a[href="/lucid-dreaming-guide.html"] { display: none; } }
 @media (max-width: 380px) { .site-nav { gap: 8px; } .site-nav a { font-size: 12.5px; } .site-header .logo { font-size: 18px; } }
+
+/* Author byline and box */
+.post-header .meta a { color: var(--ra-purple); }
+.author-box { margin: 48px 0 32px; padding: 22px 26px; border: 1px solid var(--ra-border); border-left: 3px solid var(--ra-purple); border-radius: 14px; background: var(--ra-card-bg); }
+.author-box .author-eyebrow { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--ra-gold); margin-bottom: 8px; }
+.author-box p { margin: 0; font-size: 15.5px; }
+.author-box a { color: var(--ra-purple); }
+.footer-links { flex-wrap: wrap; row-gap: 8px; }
