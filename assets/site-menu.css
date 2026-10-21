@@ -1,0 +1,53 @@
+/* RealAwake mobile menu: a small dropdown box on phones. Desktop is untouched. */
+.ra-toggle { display: none; }
+@media (max-width: 720px) {
+  html.ra-js .site-header,
+  html.ra-js .nav,
+  html.ra-js .site-top { position: relative; z-index: 30; }
+  html.ra-js .site-header .wrap--wide { position: static; }
+
+  html.ra-js .ra-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    flex: 0 0 auto; width: 44px; height: 44px; padding: 0;
+    background: rgba(255,255,255,0.05); color: #fff; cursor: pointer;
+    border: 1px solid rgba(179,157,219,0.35); border-radius: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html.ra-js .ra-toggle:focus-visible { outline: 2px solid #f0c040; outline-offset: 2px; }
+  .ra-bars, .ra-bars::before, .ra-bars::after {
+    display: block; width: 18px; height: 2px; background: currentColor;
+    border-radius: 2px; content: ''; transition: transform .2s ease, top .2s ease, background .2s ease;
+  }
+  .ra-bars { position: relative; }
+  .ra-bars::before { position: absolute; left: 0; top: -6px; }
+  .ra-bars::after  { position: absolute; left: 0; top: 6px; }
+  .ra-toggle[aria-expanded="true"] .ra-bars { background: transparent; }
+  .ra-toggle[aria-expanded="true"] .ra-bars::before { top: 0; transform: rotate(45deg); }
+  .ra-toggle[aria-expanded="true"] .ra-bars::after  { top: 0; transform: rotate(-45deg); }
+
+  html.ra-js .ra-links {
+    display: none !important;
+    position: absolute; right: 14px; top: calc(100% - 6px); z-index: 40;
+    width: min(260px, calc(100vw - 28px));
+    flex-direction: column; align-items: stretch; gap: 2px; padding: 10px;
+    background: #0d0b1a; border: 1px solid rgba(179,157,219,0.28); border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  }
+  html.ra-js .site-top .ra-links { top: calc(100% + 12px); }
+  html.ra-js .ra-links.open { display: flex !important; }
+  html.ra-js .ra-links a {
+    display: block !important; padding: 13px 14px; font-size: 16px; line-height: 1.2;
+    color: #b39ddb; opacity: 1; border-radius: 10px; text-align: left;
+    white-space: normal; text-decoration: none; background: transparent;
+  }
+  html.ra-js .ra-links a:hover,
+  html.ra-js .ra-links a:focus-visible { background: rgba(179,157,219,0.14); color: #fff; }
+  html.ra-js .ra-links a[href*="apps.apple.com"] {
+    background: #f0c040; color: #06060e; font-weight: 600; text-align: center;
+    margin-top: 6px; border-radius: 999px; padding: 13px 18px;
+  }
+  html.ra-js .ra-links a[href*="apps.apple.com"]:hover { background: #f0c040; color: #06060e; opacity: .92; }
+}
+@media (min-width: 721px) {
+  .nav .ra-links { display: flex; align-items: center; gap: 24px; }
+}

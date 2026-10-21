@@ -112,18 +112,21 @@
 .final{text-align:center;padding:56px 0 90px}.final h2{font-size:32px;margin-bottom:8px}.final p{color:var(--ra-text-muted);margin-bottom:22px}
 @media (max-width:860px){.cards{grid-template-columns:1fr}.app-hero,.feat,.feat.flip{grid-template-columns:1fr;gap:28px}.app-hero{padding-top:40px}.app-copy h1{font-size:32px}.feat.flip .feat-img{order:0}.phone{max-width:240px}.guide-band{grid-template-columns:80px 1fr;padding:18px}.sec h2{font-size:26px}}
 </style>
+<link rel="stylesheet" href="/assets/site-menu.css">
+<script src="/assets/site-menu.js"></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap wrap--wide">
     <a href="/" class="logo"><img src="/assets/app-icon.png" alt="RealAwake" class="logo-icon"><span class="real">Real</span><span class="awake">Awake</span></a>
-    <nav class="site-nav">
+    <nav class="site-nav ra-links" id="ra-menu">
       <a href="/blog/">Blog</a>
       <a href="/dream-journal-app.html">Journal App</a>
       <a href="/lucid-dreaming-guide.html">Free Guide</a>
       <a href="https://apps.apple.com/app/id6761784916" class="btn-gold">Download</a>
     </nav>
+    <button type="button" class="ra-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="ra-menu"><span class="ra-bars" aria-hidden="true"></span></button>
   </div>
 </header>
 
