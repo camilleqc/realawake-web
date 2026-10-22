@@ -387,3 +387,9 @@ p { margin: 0 0 1.3em; }
 .author-box p { margin: 0; font-size: 15.5px; }
 .author-box a { color: var(--ra-purple); }
 .footer-links { flex-wrap: wrap; row-gap: 8px; }
+
+/* App screenshots inside articles */
+.app-shot { margin: 28px auto; max-width: 250px; text-align: center; }
+.app-shot img { display: block; width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--ra-border); }
+.app-shot figcaption { margin-top: 10px; font-size: 14px; color: var(--ra-text-muted); }
+.author-note { margin-top: 36px; }

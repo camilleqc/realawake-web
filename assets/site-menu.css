@@ -51,3 +51,11 @@
 @media (min-width: 721px) {
   .nav .ra-links { display: flex; align-items: center; gap: 24px; }
 }
+
+/* Touch targets: footer and author links (mobile only) */
+@media (max-width: 720px) {
+  html .footer a, html .site-footer a, html footer .links a { display: inline-flex; align-items: center; min-height: 44px; }
+  html .footer .f-links a, html .site-footer .footer-links a { padding-top: 0; padding-bottom: 0; }
+  html .site-footer .footer-links, html .footer .f-links { row-gap: 0; }
+  html .post-header .meta a, html .author-box a { display: inline-block; padding: 12px 2px; margin: -12px 0; }
+}
