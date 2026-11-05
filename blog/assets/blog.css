@@ -393,3 +393,11 @@ p { margin: 0 0 1.3em; }
 .app-shot img { display: block; width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--ra-border); }
 .app-shot figcaption { margin-top: 10px; font-size: 14px; color: var(--ra-text-muted); }
 .author-note { margin-top: 36px; }
+
+/* In short summary box */
+.in-short { margin: 0 0 32px; padding: 20px 24px; border: 1px solid var(--ra-border); border-left: 3px solid var(--ra-gold); border-radius: 14px; background: var(--ra-card-bg); }
+.in-short .in-short-eyebrow { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--ra-gold); margin-bottom: 8px; }
+.in-short p { margin: 0; font-size: 16px; }
+
+/* 3-column tables keep their middle column on phones */
+@media (max-width: 640px) { .post-body table.table-3 th:nth-child(2), .post-body table.table-3 td:nth-child(2) { display: table-cell; } .post-body table.table-3 { font-size: 13.5px; } .post-body table.table-3 th, .post-body table.table-3 td { padding: 10px 6px; } }
